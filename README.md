@@ -11,7 +11,7 @@ x64 Windows, supported versions:
 * Windows 7 SP1
 * Windows 8
 * Windows 8.1
-* Windows 10 (TH1/TH2/RS1/RS2)
+* Windows 10 (TH1/TH2/RS1/RS2/RS3)
 
 Administrative privilege is required.
 
@@ -24,6 +24,18 @@ Using this program might render your computer into an unbootable state.
 Source code provided AS-IS in help it will be useful BUT WITHOUT WARRANTY OF ANY KIND.
 
 ANY USE OF THE SOFTWARE IS ENTIRELY AT YOUR OWN RISK.
+
+# Install
+
+Run patch.exe elevated.
+
+
+# Uninstall
+
+In elevated command prompt type bcdedit /delete < patch guard disable entry id >
+
+Navigate to Windows\System32 folder and delete ntkrnlmp.exe, osloader.exe (BIOS boot) or osloader.efi (EFI boot)
+
 
 # Build 
 
@@ -43,4 +55,4 @@ In order to build from source you need Microsoft Visual Studio 2015 and later ve
 * EP_X0FF, https://github.com/hfiref0x
 * Fyyre,   http://fyyre.ru
 
-(c) 2017 UPGDSED Project
+(c) 2017 - 2018 UPGDSED Project
